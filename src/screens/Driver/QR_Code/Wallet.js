@@ -1,11 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import Profile_page from '../components/profilepage/profile_page'
 
-export default function ProfileScreen() {
+export default function Wallet() {
   return (
     <View>
-      <Profile_page/>
+      <Text>Wallet</Text>
     </View>
   )
 }
