@@ -7,8 +7,8 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 // import Bookicon from '../../assets/icons/bookicon';
-import SearchIcon from '../assets/icons/searchicon';
-import Filtericon from '../assets/icons/filtericon';
+import SearchIcon from '../../assets/icons/searchicon';
+import Filtericon from '../../assets/icons/filtericon';
 
 function Search() {
   const [inputText, setInputText] = useState('');

@@ -6,12 +6,14 @@ import Admin_dashboard from '../screens/Admin/admin_dashboard';
 import Login from '../screens/Authentication/login';
 import Driver_dashboard from '../screens/Driver/driver_dashboard';
 import Assign_drivers from '../screens/Admin/Job_assign/assign_Drivers';
+import Add_Driver from '../screens/Admin/Driver_page/Add_Driver';
+import EnableLocationScreen from '../screens/Authentication/location';
 
 const Stack = createStackNavigator();
 export default function Navigation() {
   return (
     <NavigationContainer>
-    <Stack.Navigator initialRouteName="Assign_drivers">
+    <Stack.Navigator initialRouteName="Enable_Location">
       <Stack.Screen 
         name="Login" 
         component={Login} 
@@ -30,6 +32,16 @@ export default function Navigation() {
       <Stack.Screen 
         name="Assign_drivers" 
         component={Assign_drivers} 
+        options={{ headerShown: false }} 
+      />
+      <Stack.Screen 
+        name="Add_Driver" 
+        component={Add_Driver} 
+        options={{ headerShown: false }} 
+      />
+      <Stack.Screen 
+        name="Enable_Location" 
+        component={EnableLocationScreen} 
         options={{ headerShown: false }} 
       />
     </Stack.Navigator>

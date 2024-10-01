@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
-import Callicon from '../assets/icons/callicon';
-import Locationicon from '../assets/icons/locationicon';
+import Callicon from '../../assets/icons/callicon';
+import Locationicon from '../../assets/icons/locationicon';
 
 const DriverCard = ({driver}) => {
   return (
