@@ -1,18 +1,16 @@
 import {StyleSheet, Text, View, Dimensions} from 'react-native';
 import React from 'react';
-import ArrowBack from '../../../assets/icons/arrowback';
-import Search from '../../../components/assign_driver_searchbar';
-import AssignDriverCard from '../../../components/assign_driver_list';
+// import ArrowBack from '../../../assets/icons/arrowback';
+import Search from '../../../components/assign_driver_components/assign_driver_searchbar';
+import AssignDriverCard from '../../../components/assign_driver_components/assign_driver_list';
+import Assign_driver_appbar from '../../../components/assign_driver_components/assign_driver_appbar';
 
-const {width} = Dimensions.get('window'); // Get screen width
+const {width} = Dimensions.get('window');
 
 export default function Assign_drivers() {
   return (
     <View style={styles.container}>
-      <View style={[styles.header , {gap: 5,}]}>
-        <ArrowBack/>
-        <Text style={styles.heading}>Assign drivers</Text>
-      </View>
+      <Assign_driver_appbar title="Assign drivers" />
       <Text style = {styles.my_driver}>My Drivers</Text>
       <View>
         <Search/>
@@ -22,9 +20,8 @@ export default function Assign_drivers() {
   );
 }
 
-// Function to adjust font size based on screen width
 const responsiveFontSize = (fontSize) => {
-  const scaleFactor = width / 375; // Assuming 375 is the base screen width (iPhone 6/7/8)
+  const scaleFactor = width / 375;
   return fontSize * scaleFactor;
 };
 
@@ -34,9 +31,6 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 10,
     paddingVertical: 15,
-  },
-  header: {
-    flexDirection: 'row',
   },
   heading: {
     color: 'black',
